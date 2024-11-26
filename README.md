@@ -30,15 +30,14 @@
 1. Поле **"projectID"** в справочнике "Employee" ссылается на поле **ID** справочника "Project". Поле _NOT NULL_
 
 # Шаг 2
-
+#### Будем использовать PostgreSQL <br>
+![diag](https://github.com/redfox193/outsource/blob/main/diag.png)
 ```sql
--- Добавление записей в таблицу Project
 INSERT INTO Project (ID, ProjectName, ProjectDescription, Budget, Deadline)
 VALUES
     (1, 'Проект A', 'Описание проекта A', 1000000.50, '2025-12-31'),
     (2, 'Проект B', 'Описание проекта B', 500000.50, '2026-06-30');
 
--- Добавление записей в таблицу Employee
 INSERT INTO Employee (ID, FullName, Position, ProjectID, SuccessfulProjectsCount)
 VALUES
     (1, 'Гончаров Сергей Витальевич', 'Менеджер', 1, 5),
